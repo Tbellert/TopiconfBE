@@ -16,25 +16,25 @@ public class CarEndpiont {
 	//@Autowired
 	
 
-	@GetMapping("/CarUpdate")
+	@GetMapping("/Car/update")
 	public Iterable<Car> justTry() {
 		System.out.println("abc");
 		return null;
 	}
 	
-	@PostMapping("/addCar")
+	@PostMapping("/Car/add")
 	public void justTry2(@RequestParam("param") String param) {
 		System.out.println("abc2" + param);
 	}
 	
-	@PostMapping("/addCar2")
+	@PostMapping("/Car/add2")
 	public void justTry3(@RequestBody Car car) {
 		System.out.println("abc-24" + car.getBrand());
 		
 	}
 	
 	
-	@DeleteMapping("/deleteCar/{carid}")
+	@DeleteMapping("/Car/delete/{carid}")
 	public void deleteCar(@PathVariable("carid") long carid) {
 		System.out.println("abc3");
 	}
