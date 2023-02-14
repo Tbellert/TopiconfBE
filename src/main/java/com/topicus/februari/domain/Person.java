@@ -14,8 +14,48 @@ public class Person {
     private long id;
 
     String name;
-    LocalDate dateofbirth;
+    LocalDate dateOfBirth;
     String hometown;
     boolean isSpeaker;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDateofbirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateofbirth(LocalDate dateofbirth) {
+        this.dateOfBirth = dateofbirth;
+    }
+
+    public String getHometown() {
+        return hometown;
+    }
+
+    public void setHometown(String hometown) {
+        this.hometown = hometown;
+    }
+
+    public boolean isSpeaker() {
+        return isSpeaker;
+    }
+
+    public void setSpeaker(boolean speaker) {
+        isSpeaker = speaker;
+    }
 
 }
