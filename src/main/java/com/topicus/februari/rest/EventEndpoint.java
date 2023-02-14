@@ -26,6 +26,10 @@ public class EventEndpoint {
 		
 	}
 	
+	@GetMapping("/eventm/ikwilzeallemaal")
+	public Iterable<EventM> allemaal() {
+		return es.geefAlles();
+	}
 	
 	
 	@GetMapping("/eventm/ownextrainfo")
