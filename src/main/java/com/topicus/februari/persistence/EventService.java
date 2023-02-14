@@ -23,7 +23,7 @@ public class EventService
 		
 	}
 	
-	public void geefAlles() {
-		er.findAll();
+	public Iterable<EventM> geefAlles() {
+		return er.findAll();
 	}
 }
