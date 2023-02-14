@@ -12,27 +12,27 @@ import com.topicus.februari.domain.EventM;
 @RestController
 public class EventEndpoint {
 	
-	@GetMapping("/ownextrainfo")
+	@GetMapping("/eventm/ownextrainfo")
 	public void justTrying() {
 		System.out.println("go");
 	}
-	@PostMapping("/ownextrainfo")
+	@PostMapping("/eventm/ownextrainfo")
 	public void justTrying2() {
 		System.out.println("another");
 	}
-	@GetMapping("/metpad/{eventname}")
+	@GetMapping("/eventm/metpad/{eventname}")
 	public void metpad( @PathVariable("eventname") String eventnaam ) {
 		System.out.println("met padnaam: "+eventnaam);
 	}
-	@GetMapping("/metparam")
+	@GetMapping("/eventm/metparam")
 	public void metparam(@RequestParam("getal") int getal) {
 		System.out.println("param: "+getal);
 	}
-	@PostMapping("/metbody")
+	@PostMapping("/eventm/metbody")
 	public void metbody(@RequestBody EventM e) {
 		System.out.println(e.getTitle());
 	}
-	@GetMapping("/eventterug")
+	@GetMapping("/eventm/eventterug")
 	public EventM metEventTerug() {
 		System.out.println("een event krijgen");
 		return new EventM();
