@@ -10,17 +10,17 @@ public class PersonEndpoint {
 //    @Autowired
 //    PersonService ps;
 
-    @GetMapping("returnAllPersons")
+    @GetMapping("person/returnAllPersons")
     public void justTrying() {
         System.out.println("go");
     }
 
-    @GetMapping("metpad/{personname}")
+    @GetMapping("person/metpad/{personname}")
     public void metpad(@PathVariable("personname") String persoonnaam){
         System.out.println("met padnaam: " + persoonnaam);
     }
 
-    @GetMapping("metparam")
+    @GetMapping("person/metparam")
     public void metparam(@RequestParam("naam") String naam){
         System.out.println("param: " + naam);
     }
