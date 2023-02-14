@@ -32,6 +32,11 @@ public class EventEndpoint {
 	public void metbody(@RequestBody EventM e) {
 		System.out.println(e.getTitle());
 	}
+	@GetMapping("/eventterug")
+	public EventM metEventTerug() {
+		System.out.println("een event krijgen");
+		return new EventM();
+	}
 
 }
 
