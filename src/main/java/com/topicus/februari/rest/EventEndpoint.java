@@ -1,5 +1,6 @@
 package com.topicus.februari.rest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,9 +9,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.topicus.februari.domain.EventM;
+import com.topicus.februari.persistence.EventService;
 
 @RestController
 public class EventEndpoint {
+	
+	@Autowired
+	private EventService es;
+	
+	
 	
 	@GetMapping("/eventm/ownextrainfo")
 	public void justTrying() {
@@ -18,6 +25,7 @@ public class EventEndpoint {
 	}
 	@PostMapping("/eventm/ownextrainfo")
 	public void justTrying2() {
+		es.EventOpslaan();
 		System.out.println("another");
 	}
 	@GetMapping("/eventm/metpad/{eventname}")
