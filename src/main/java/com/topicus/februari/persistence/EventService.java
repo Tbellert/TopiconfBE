@@ -17,4 +17,13 @@ public class EventService
 		mijnEvent.setTitle("Het openingsevent");
 		er.save(mijnEvent);
 	}
+
+	public void opslaanNieuwDing(EventM event) {
+		er.save(event);
+		
+	}
+	
+	public void geefAlles() {
+		er.findAll();
+	}
 }

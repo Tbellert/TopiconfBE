@@ -18,6 +18,15 @@ public class EventEndpoint {
 	private EventService es;
 	
 	
+	@GetMapping("/eventm/voorbeeldopslaan/{eventnaam}")
+	public void voorbeeldopslaan(@PathVariable("eventnaam") String eventn) {
+		EventM event = new EventM();
+		event.setTitle(eventn);
+		es.opslaanNieuwDing(event);
+		
+	}
+	
+	
 	
 	@GetMapping("/eventm/ownextrainfo")
 	public void justTrying() {
